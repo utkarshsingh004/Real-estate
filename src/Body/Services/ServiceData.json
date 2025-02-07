@@ -1,0 +1,37 @@
+[
+    {
+        "image":"https://res.cloudinary.com/dwzzzllfr/image/upload/v1732470913/icon-1_szxc8j.png",
+         "name":"Buy House",
+         "description":"Buying a house involves selecting a property, securing financing, making an offer, completing inspections, and finalizing the purchase through closing."
+    },
+
+    {
+        "image":"https://res.cloudinary.com/dwzzzllfr/image/upload/v1732470912/icon-2_hc8w0j.png",
+         "name":"Rent House",
+         "description":"Renting a house involves finding a suitable property, signing a lease agreement, paying rent and security deposits, and following the landlord's terms."
+    },
+
+    {
+        "image":"https://res.cloudinary.com/dwzzzllfr/image/upload/v1732470912/icon-3_q7ohw3.png",
+         "name":"Sell House",
+         "description":"Selling a house involves setting a price, listing the property, marketing, negotiating offers, completing inspections, and closing the sale with legal paperwork."
+    },
+
+    {
+        "image":"https://res.cloudinary.com/dwzzzllfr/image/upload/v1732470912/icon-4_kwxdkd.png",
+         "name":"Flat & Buildings",
+         "description":"A flat is a single residential unit within a multi-story building, while a building is a structure that can contain multiple flats, offices, or other spaces."
+    },
+
+    {
+        "image":"https://res.cloudinary.com/dwzzzllfr/image/upload/v1732470912/icon-2_hc8w0j.png",
+         "name":"Shops & Malls",
+         "description":"A shop is a small retail space selling goods or services, while a mall is a large complex with multiple shops, restaurants, and entertainment facilities."
+    },
+
+    {
+        "image":"https://res.cloudinary.com/dwzzzllfr/image/upload/v1732470912/icon-6_qwih1e.png",
+         "name":"24/7 Services",
+         "description":"24/7 services operate continuously, providing support, products, or assistance at any time of day or night, ensuring round-the-clock availability."
+    }
+]

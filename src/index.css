@@ -1,0 +1,28 @@
+* {
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", Arial, Helvetica, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  Body{
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid red; */
+    background-color: #c5c1c1;
+    width: 100%;
+  } 
+
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(250, 4, 4, 0.97);
+    border-radius: 10px;
+  }

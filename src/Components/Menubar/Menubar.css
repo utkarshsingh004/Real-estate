@@ -1,0 +1,19 @@
+.menubar{
+    display: none;
+  }
+
+  @media screen and (max-width:1000px) {
+  
+    .menubar{
+      display: block;
+      text-align: right;
+      margin-right: 6%;
+      margin-top: 2%;
+    }
+
+    .menubar img{
+        width: 50px;
+        cursor: pointer;
+    }
+  
+  }
