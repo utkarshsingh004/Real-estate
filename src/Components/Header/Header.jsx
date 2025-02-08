@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import Menubar from "../Menubar/Menubar";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [symbol, setSymbol] = useState(true);
@@ -112,8 +113,8 @@ const Header = () => {
             <img src="https://img.icons8.com/?size=60&id=99992&format=png&color=FA5252" />
             {dropdownOpen === "Profile" && (
               <div className="dropdown">
-                <h4>Sign up</h4>
-                <h4>Log in</h4>
+                <Link to="/signup">Sign up</Link>
+                <Link to="/login">Log in</Link>
               </div>
             )}
           </li>
