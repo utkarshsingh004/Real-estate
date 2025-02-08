@@ -39,9 +39,11 @@
     width: 90%;
 }
 
-.ser:hover{
+.ser:hover {
     border: 2px solid black;
-    box-shadow: 4px 1px 1px 1px rgb(183, 66, 66);
+    box-shadow: 4px 1px 10px 1px rgb(183, 66, 66); /* Increased shadow for better effect */
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
 @media screen and (max-width:1000px) {

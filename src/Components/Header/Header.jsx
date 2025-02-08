@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from "react";
-import './Header.css';
+import "./Header.css";
 import Menubar from "../Menubar/Menubar";
 
 const Header = () => {
   const [symbol, setSymbol] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1000);
+  const [dropdownOpen, setDropdownOpen] = useState(null); // Track open dropdown
 
   function changeMenu() {
     setSymbol(!symbol);
-    setMenuOpen(prev => !prev);
+    setMenuOpen((prev) => !prev);
   }
 
-  // Update isMobile state when window resizes
+  // Handle dropdown toggle on click
+  function toggleDropdown(menu) {
+    setDropdownOpen((prev) => (prev === menu ? null : menu));
+  }
+
+  // Close dropdown on window resize
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1000);
       if (window.innerWidth >= 1000) {
-        setMenuOpen(true); // Show menu if width is over 1000px
+        setMenuOpen(true);
       } else {
-        setMenuOpen(false); // Hide menu when under 1000px
+        setMenuOpen(false);
       }
     };
 
@@ -33,21 +39,96 @@ const Header = () => {
         <img src="logo.png" alt="Company Logo" />
       </div>
 
-      {/* Conditionally apply class based on screen size */}
-      <nav className={`nav ${menuOpen ? "open" : "closed"} ${isMobile ? "mobile" : ""}`}>
+      <nav
+        className={`nav ${menuOpen ? "open" : "closed"} ${
+          isMobile ? "mobile" : ""
+        }`}
+      >
         <ul className="item">
-          <li><a href="#" className="hover:text-gray-300">Home</a></li>
-          <li><a href="#" className="hover:text-gray-300">About</a></li>
-          <li><a href="#" className="hover:text-gray-300">Services</a></li>
-          <li><a href="#" className="hover:text-gray-300">Contact</a></li>
+          {/* Buy Menu */}
+          <li onClick={() => toggleDropdown("buy")}>
+            <a href="#" className="Buy">
+              Buy
+            </a>
+            <img src="https://img.icons8.com/?size=60&id=99992&format=png&color=FA5252" />
+            {dropdownOpen === "buy" && (
+              <div className="dropdown">
+                <h4>House</h4>
+                <h4>Flat</h4>
+                <h4>Shop</h4>
+              </div>
+            )}
+          </li>
+
+          {/* Sell Menu */}
+          <li onClick={() => toggleDropdown("sell")}>
+            <a href="#" className="Sell">
+              Sell
+            </a>
+            <img src="https://img.icons8.com/?size=60&id=99992&format=png&color=FA5252" />
+            {dropdownOpen === "sell" && (
+              <div className="dropdown">
+                <h4>Post Property</h4>
+                <h4>Dashboard</h4>
+              </div>
+            )}
+          </li>
+
+          {/* Rent Menu */}
+          <li onClick={() => toggleDropdown("rent")}>
+            <a href="#" className="Rent">
+              Rent
+            </a>
+            <img src="https://img.icons8.com/?size=60&id=99992&format=png&color=FA5252" />
+            {dropdownOpen === "rent" && (
+              <div className="dropdown">
+                <h4>House</h4>
+                <h4>Flat</h4>
+                <h4>Shop</h4>
+              </div>
+            )}
+          </li>
+
+          {/* Help Menu */}
+          <li onClick={() => toggleDropdown("help")}>
+            <a href="#" className="Help">
+              Help
+            </a>
+            <img src="https://img.icons8.com/?size=60&id=99992&format=png&color=FA5252" />
+            {dropdownOpen === "help" && (
+              <div className="dropdown">
+                <h4>About us</h4>
+                <h4>Contact us</h4>
+                <h4>FAQ</h4>
+              </div>
+            )}
+          </li>
+
+          {/* Profile Menu */}
+          <li onClick={() => toggleDropdown("Profile")}>
+            <a href="#" className="Profile">
+              Profile
+            </a>
+            <img src="https://img.icons8.com/?size=60&id=99992&format=png&color=FA5252" />
+            {dropdownOpen === "Profile" && (
+              <div className="dropdown">
+                <h4>Sign up</h4>
+                <h4>Log in</h4>
+              </div>
+            )}
+          </li>
         </ul>
       </nav>
 
-      {/* Show Menubar only in mobile view */}
+      {/* Mobile Menu Toggle */}
       {isMobile && (
-        <Menubar 
-          image={symbol ? "https://img.icons8.com/?size=96&id=12371&format=png" : "https://img.icons8.com/?size=96&id=T9nkeADgD3z6&format=png"} 
-          changeMenuFunction={changeMenu} 
+        <Menubar
+          image={
+            symbol
+              ? "https://img.icons8.com/?size=96&id=12371&format=png"
+              : "https://img.icons8.com/?size=96&id=T9nkeADgD3z6&format=png"
+          }
+          changeMenuFunction={changeMenu}
         />
       )}
     </header>

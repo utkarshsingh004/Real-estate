@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section about">
           <h2>About Us</h2>
-          <p>We provide high-quality web solutions using modern technologies like MERN stack.</p>
+          <p>Welcome to Aapna Ghar, your trusted real estate partner. We specialize in buying, selling, and renting properties, ensuring a seamless and hassle-free experience. With a commitment to excellence, we help you find your dream home, perfect office, or ideal investment. Let’s build your future together! 🏡✨</p>
         </div>
 
         <div className="footer-section links">

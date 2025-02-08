@@ -32,6 +32,11 @@
     font-size: 14px;
     color: #ccc;
     text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .footer-section li{
+    list-style: none;
   }
   
   .footer-section a:hover {
@@ -46,7 +51,12 @@
   }
   
   /* Mobile Responsive */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 100px) {
+
+    footer{
+      text-align: center;
+    }
+
     .footer-content {
       flex-direction: column;
       text-align: center;
